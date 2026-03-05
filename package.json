@@ -10,12 +10,18 @@
   "dependencies": {
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-react": "^5.32.0",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-react": "^5.18.0",
+    "@types/uuid": "^10.0.0",
     "typescript": "^5"
   }
 }
