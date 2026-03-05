@@ -6,7 +6,7 @@ export interface Assignment {
   subject: string;
   description: string;
   dueDate: string;
-  status: "pending" | "in-progress" | "completed";
+  status: "Create" | "On Process" | "Submitted";
   priority: "low" | "medium" | "high";
   createdAt: string;
   updatedAt: string;
@@ -17,7 +17,7 @@ export interface CreateAssignmentDTO {
   subject: string;
   description?: string;
   dueDate: string;
-  status?: "pending" | "in-progress" | "completed";
+  status?: "Create" | "On Process" | "Submitted";
   priority?: "low" | "medium" | "high";
 }
 
@@ -26,7 +26,7 @@ export interface UpdateAssignmentDTO {
   subject?: string;
   description?: string;
   dueDate?: string;
-  status?: "pending" | "in-progress" | "completed";
+  status?: "Create" | "On Process" | "Submitted";
   priority?: "low" | "medium" | "high";
 }
 
@@ -37,7 +37,7 @@ let assignments: Assignment[] = [
     subject: "Web Development",
     description: "Build a full REST API using Next.js with Swagger documentation",
     dueDate: "2025-04-01",
-    status: "in-progress",
+    status: "Create",
     priority: "high",
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -55,7 +55,7 @@ export const db = {
       subject: data.subject,
       description: data.description ?? "",
       dueDate: data.dueDate,
-      status: data.status ?? "pending",
+      status: data.status ?? "Create",
       priority: data.priority ?? "medium",
       createdAt: now,
       updatedAt: now,

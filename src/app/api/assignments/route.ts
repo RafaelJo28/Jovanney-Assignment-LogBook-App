@@ -16,8 +16,8 @@ export async function POST(request: Request) {
       }
     }
 
-    if (body.status && !["pending", "in-progress", "completed"].includes(body.status))
-      return NextResponse.json({ error: "Invalid status. Must be: pending, in-progress, or completed" }, { status: 400 });
+    if (body.status && !["Create", "On Process", "Submitted"].includes(body.status))
+      return NextResponse.json({ error: "Invalid status. Must be: Create, On Process, or Submitted" }, { status: 400 });
 
     if (body.priority && !["low", "medium", "high"].includes(body.priority))
       return NextResponse.json({ error: "Invalid priority. Must be: low, medium, or high" }, { status: 400 });
